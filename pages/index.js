@@ -1,6 +1,12 @@
-export default function Home(){
-  return <>
-    <h1>home</h1>
-  </>
+import Nav from '../components/Nav'
+
+function Home(){
+  return (
+    <>
+      <Nav />      
+      <h1>home</h1>
+    </>
+  )
 }
 
+export default Home
