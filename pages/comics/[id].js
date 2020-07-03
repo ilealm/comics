@@ -1,9 +1,17 @@
 export default function ComicDetail(props){
-    // return <h3>Im one comic  {props.comics.safe_title} </h3>
+ 
     return (
         <>
-          <h3>Im one comic </h3>    
-          <label> {props.comics.safe_title} </label>
+          <h3>{props.comics.safe_title}  </h3>    
+          <label>Num. </label> 
+          <label> {props.comics.num} </label>
+          <br></br>
+          <label>Year. </label> 
+          <label> {props.comics.year} </label>
+          <br></br>          
+          <p> {props.comics.alt} </p>
+          <br></br>
+          <img src={props.comics.img}></img>
         </>
       )
 }
