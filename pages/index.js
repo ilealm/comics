@@ -13,7 +13,8 @@ function Home(props){
 export default Home
 
 export async function getStaticProps(){
-  const response = await fetch('http://localhost:3000/api/comics');
+  const url = 'http://localhost:3000/api/comics'
+  const response = await fetch(url);
   const comics = await response.json();
 
   return {
