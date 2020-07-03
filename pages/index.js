@@ -12,9 +12,13 @@ function Home(props){
       <Nav />      
       <br></br>
       <div  className="container">
-        <h3>Last title:</h3>
-        <p class="text-info">   { props.comics.num} { props.comics.safe_title}  </p>
+        <h3>Last title</h3>
+        <label class="text-info">   { props.comics.num} { props.comics.safe_title}  </label>        
+        <div class="alert alert-dismissible alert-danger">
+          <img src={props.comics.img}></img>
+        </div>
         <br></br>
+        <h5>Last 10 titles</h5>
         <ul>
           { props.previous.map(id => <ComicItem id={id} />) }
         </ul>
