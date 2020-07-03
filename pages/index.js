@@ -5,7 +5,7 @@ function Home(props){
   return (
     <>
       <Nav />      
-      <h1>home</h1>
+      <h1>XKCD Comics</h1>
       <p>{ props.comics.length} </p>
       <ul>
         { props.comics.map(comic => <ComicItem comic={comic} />) }
