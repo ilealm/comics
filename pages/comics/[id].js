@@ -1,5 +1,5 @@
 export default function ComicDetail(props){
-    return <h3>Im one comic  {props.comics.name} </h3>
+    return <h3>Im one comic  {props.comics.safe_title} </h3>
 }
 
 export async function getServerSideProps(context){

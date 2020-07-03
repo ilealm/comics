@@ -16,10 +16,10 @@ function Home(props){
 
 function ComicItem(props) { 
   return (
-      <li key={props.comic.id}>
-          <Link href="/comics/[id]" as={`/comics/${props.comic.id}`}>
+      <li key={props.comic.num}>
+          <Link href="/comics/[id]" as={`/comics/${props.comic.num}`}>
           <a>
-              {props.comic.name}
+              {props.comic.safe_title}
           </a>
           </Link>
           </li>

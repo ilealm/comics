@@ -2,9 +2,9 @@ export default (req, res) => {
     res.statusCode = 200
 
     const comics = [
-      { id:1, name: 'one', category:"uno" },
-      { id:2, name: 'two', category:"uno" },
-      { id:3, name: 'three', category:"tres" },
+      { num:1, safe_title: 'one', alt:"uno" },
+      { num:2, safe_title: 'two', alt:"uno" },
+      { num:3, safe_title: 'three', alt:"tres" },
        ]
 
     const comic = comics[parseInt(req.query.id) -1];
