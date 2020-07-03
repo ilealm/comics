@@ -1,7 +1,9 @@
+import Nav from '../../components/Nav'
+
 export default function ComicDetail(props){
- 
-    return (
+     return (
         <>
+          <Nav />
           <h3>{props.comics.safe_title}  </h3>    
           <label>Num. </label> 
           <label> {props.comics.num} </label>
