@@ -3,7 +3,7 @@ export default (req, res) => {
 
     const comics = [
       { id:1, name: 'one', category:"uno" },
-      { id:1, name: 'two', category:"uno" },
+      { id:2, name: 'two', category:"uno" },
       { id:3, name: 'three', category:"tres" },
        ]
 

@@ -1,4 +1,5 @@
 import Nav from '../components/Nav'
+import Link from 'next/link'
 
 function Home(props){
   return (
@@ -6,7 +7,22 @@ function Home(props){
       <Nav />      
       <h1>home</h1>
       <p>{ props.comics.length} </p>
+      <ul>
+        { props.comics.map(comic => <ComicItem comic={comic} />) }
+      </ul>
     </>
+  )
+}
+
+function ComicItem(props) { 
+  return (
+      <li key={props.comic.id}>
+          <Link href="/comics/[id]" as={`/comics/${props.comic.id}`}>
+          <a>
+              {props.comic.name}
+          </a>
+          </Link>
+          </li>
   )
 }
 
