@@ -3,17 +3,27 @@ import Nav from '../../components/Nav'
 export default function ComicDetail(props){
      return (
         <>
-          <Nav />
+        <head>
+            <title> XKCD Comics</title>
+            <link rel="stylesheet"
+              href="https://bootswatch.com/4/cerulean/bootstrap.min.css" ></link>
+        </head>
+        <Nav />
+        <br></br>
+        <div  className="container">
           <h3>{props.comics.safe_title}  </h3>    
-          <label>Num. </label> 
+          <label class="text-success">Num. </label> 
           <label> {props.comics.num} </label>
           <br></br>
-          <label>Year. </label> 
+          <label class="text-success">Year </label> 
           <label> {props.comics.year} </label>
-          <br></br>          
-          <p> {props.comics.alt} </p>
+          <br></br>     
+          <p class="text-muted">{props.comics.alt} </p>
           <br></br>
-          <img src={props.comics.img}></img>
+          <div class="alert alert-dismissible alert-danger">
+            <img src={props.comics.img}></img>
+          </div>
+        </div>
         </>
       )
 }
