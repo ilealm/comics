@@ -12,8 +12,11 @@ function Home(props){
       <Nav />      
       <br></br>
       <div  className="container">
-        <h3>Last title</h3>
-        <label class="text-info">   { props.comics.num} { props.comics.safe_title}  </label>        
+        <h2> { props.comics.safe_title}   </h2>
+        <h4> # { props.comics.num}   </h4>
+        <br></br>
+        {/* <h3>Last title</h3>
+        <label class="text-info">   { props.comics.num} { props.comics.safe_title}  </label>         */}
         <div class="alert alert-dismissible alert-danger">
           <img src={props.comics.img}></img>
         </div>
@@ -22,6 +25,17 @@ function Home(props){
         <ul>
           { props.previous.map(id => <ComicItem id={id} />) }
         </ul>
+        {/* <style jsx>{`
+            a {
+            margin: 20px;
+            padding: 20px;            
+            }
+            body: {
+              border: 1px solid #DDD;
+              background-color: floralwhite;
+            }
+        `}</style> */}
+
       </div>
       
       
@@ -32,13 +46,13 @@ function Home(props){
 function ComicItem(props) { 
   const id = props.id;
   return (
-      <li key={id}>
-          <Link href="/comics/[id]" as={`/comics/${id}`}>
+      // <li key={id}>
+          <Link key={id} href="/comics/[id]" as={`/comics/${id}`}>
           <a>
-              {id}
+            {id}      -         
           </a>
           </Link>
-          </li>
+      // </li>
   )
 }
 
